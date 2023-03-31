@@ -1,0 +1,22 @@
+# this is git config snippet  
+
+[core]
+    quotepath = false # show chinese file name correctly, should also set the locale correctly (by command 'export LANG=en_US.UTF-8' )
+
+[credential]
+    helper = store # this is used to store the password for git push
+
+[user]
+    email = myname@example.com
+    name = myname
+
+# this is used to replace the https url with ssh url
+[url "git@git.woa.com:"]
+    insteadof = https://git.woa.com/
+[url "git@git.code.oa.com:"]
+    insteadOf = https://git.code.oa.com/
+
+[alias]
+    # hs is short for history. 
+    # this alias is used to show the commit history in a oneline pretty format.
+    hs = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order

@@ -1,0 +1,3 @@
+# limit the number of concurrent jobs to 20, and limit the amount of RAM and CPU, to avoid overloading the machine
+build --jobs 20
+build --local_ram_resources=HOST_RAM*.4 --local_cpu_resources=HOST_CPUS*.4
